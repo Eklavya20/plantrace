@@ -1,0 +1,72 @@
+{
+  "source_sha256": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+  "source_kind": "existing generated synthetic PDF; not a real-plan validation",
+  "calibration_basis": "4 m horizontal and 3 m vertical over the extracted outer wall extent; not recovered building dimensions",
+  "original_room_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:room:ba301b594cbef2be",
+  "rebuilt_room_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:room:ba301b594cbef2be:rebuilt:a2b0106a2c00893be571",
+  "before_m2": 6.0,
+  "after_edit_before_rebuild_m2": null,
+  "after_rebuild_m2": 5.7,
+  "change_m2": -0.2999999999999998,
+  "room_bounds_before": [
+    100.0,
+    100.0,
+    300.0,
+    400.0
+  ],
+  "room_bounds_after": [
+    110.0,
+    100.0,
+    300.0,
+    400.0
+  ],
+  "boundary_drawing_units": {
+    "perimeter": 980.0,
+    "automatic_source_stroke_runs": 620.0,
+    "manual_wall_geometry": 300.0,
+    "explicit_hypothesis_bridges": 60.0
+  },
+  "measurement_state": "needs_review",
+  "boundary_support": "manual_unverified",
+  "inferred_boundaries": true,
+  "structure_completeness": "not_established",
+  "reconstruction_basis": {
+    "method": "current_wall_faces_v1",
+    "original_room_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:room:ba301b594cbef2be",
+    "original_geometry_version": "e34ce0b9298f46aa67e3cbc8653260551e6fab66754f7617517e0a5fbe22f6f9",
+    "wall_geometry_versions": {
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:dbced54358cc1103": "278ebb0c8e04b2ea2f1e7496795523a43ba9614064cd7b7ca6f03e3adff52dce",
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:0ee789b2d08a06dd": "eea55fe4659cec9f656415cb4075058666a5afcdf76f2833cdabfa62f29edb11",
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:2e768c680f6870cc": "81b4d29f74f1806a5af3fbef454268193e46b0d2281144dc637c738005f001bc",
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:b1b4195a541aef30": "72516c1f8e55ce1376cfc06a083a46bf366ceb930b9ec67b400fce234b0038c2",
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:60a3f726de01dbb6": "6dd4c6886b4f3577cd98523879e95ecef7bc3a71fe5626453fea51001d568a5b",
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:1a62737c113ff8a5": "b986a627a7ea5249c5564e5b5845f386f175d6f3eff6099cffe1cb0eb5811de4",
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:f6a46ddda7ba0e02": "196cef23d39e4790e979552f8ce6a49919a5a48e784bae8a41d2b305719a1326",
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:74594ecc5b6cb7a6:manual:1d8e48e65c405d08": "b26f76f6e25d942737f10785f8111d64b7628cb4103aa98ffe461653e6943326"
+    },
+    "bridge_geometry_versions": {
+      "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:closure:f319d121e532eee6": "19d4637d9c474510f8898579b7207adc4f59a32fd19ec1fc0db0c176488f4aaa"
+    },
+    "network_version": "2d09e94a4d76142f2a047f9df36480e72d92d99e7dcf23236a11c32372ec66fd",
+    "reviewer": "Synthetic technical demonstration",
+    "note": "Explicitly recover the closed face after correcting an extracted wall"
+  },
+  "active_entities": 11,
+  "retired_snapshots": 2,
+  "relationships": 25,
+  "model_versions": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "restart_export_matches": true,
+  "engineering_handoff_eligible": false,
+  "implementation_sha256": {
+    "plantrace/room_rebuild.py": "416bb1825a48054c40f160228cd5fddaa105ec910d37f8e6ccec40a0969a96f1",
+    "plantrace/candidate_models.py": "23103a67c8090460c06ebdff44c6b937aa266d215520b34cafa60f71669c17cf",
+    "plantrace/measurements.py": "8b047015127a792bb1a04c4d1c4364676f26c21e8d736c9495ebd76486ffc3f7",
+    "plantrace/review_ui.py": "3947014d0d1edaf8ff9e3dfef5644f8be6d0a64ffaa9d87500934dfa477b5eba",
+    "scripts/demonstrate_room_rebuild.py": "f2a42b7a203474de10b48d4d0cef43d1740704524f851405371f8cc4fce020c8"
+  }
+}

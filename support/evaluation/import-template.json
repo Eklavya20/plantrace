@@ -1,0 +1,29 @@
+{
+  "schema_version": "stage5-evaluation-1",
+  "datasets": [
+    {
+      "id": "independent_plan_001",
+      "file": "imports/your-permitted-drawing.pdf",
+      "sha256": "REPLACE_WITH_ACTUAL_SHA256",
+      "origin": "independent_real",
+      "source_url": "REPLACE_WITH_ORIGINAL_SOURCE_OR_LOCAL_AUTHORIZATION_RECORD",
+      "permission_url": "REPLACE_WITH_PERMISSION_OR_LICENSE_RECORD",
+      "permission": "REPLACE_WITH_SPECIFIC_PERMISSION_AND_ATTRIBUTION",
+      "annotation_provenance": "No geometric labels yet; not counted as negative examples.",
+      "si_label_provenance": null,
+      "pages": [
+        {
+          "rooms": null,
+          "walls": null,
+          "openings": null,
+          "wall_connectivity": null,
+          "room_boundary": null,
+          "room_adjacency": null,
+          "opening_host": null,
+          "scale_m_per_unit": null,
+          "references": []
+        }
+      ]
+    }
+  ]
+}

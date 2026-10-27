@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plantrace"
+version = "0.6.0"
+description = "Evidence-backed floor-plan review and offline reliability evaluation"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.40,<2",
+    "PyMuPDF>=1.24.4,<2",
+    "pydantic>=2.7,<3",
+    "Pillow>=10.4,<14",
+    "Shapely>=2.0.6,<3",
+    "pandas>=2.1,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "reportlab>=4,<5"]
+
+[tool.setuptools.packages.find]
+include = ["plantrace*"]
+
+[tool.setuptools.package-data]
+plantrace = ["point_picker_frontend/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra"
+cache_dir = "support/cache/pytest"

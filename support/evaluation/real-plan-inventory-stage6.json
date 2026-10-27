@@ -1,0 +1,38 @@
+{
+  "checked_on": "2026-10-27",
+  "evaluated_real_drawings": 0,
+  "evaluated_real_pages": 0,
+  "verified_real_si_labels": 0,
+  "targets": [
+    {
+      "id": "featherston_floor_plan",
+      "title": "Floor Plan.pdf (ground floor plan; Featherston House category)",
+      "author": "Zaidaudi",
+      "date": "2012-04-18",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Floor_Plan.pdf",
+      "permission_url": "https://commons.wikimedia.org/w/index.php?title=File:Floor_Plan.pdf&oldid=1254967082",
+      "license": "CC BY-SA 3.0 Unported",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "permitted_usage": "Source declaration permits copying and adaptation with attribution, a license link, change indication and applicable share-alike terms. No binary redistribution occurred.",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Floor_Plan.pdf",
+      "metadata_access": "Source and license description accessible; web tool extracted architectural room labels from the PDF.",
+      "file_access": "Direct original-file download returned HTTP 429. No rate-limit bypass attempted.",
+      "downloaded": false,
+      "sha256": null,
+      "evaluated": false,
+      "notes": "Metadata/text access is not an app ingestion or real-plan extraction result. No geometry, SI dimensions or accuracy invented."
+    },
+    {
+      "id": "loc_greendale_floor_plan",
+      "title": "Floor plan. Greendale, Wisconsin",
+      "source_url": "https://www.loc.gov/item/2017760222/",
+      "permission_url": "https://www.loc.gov/item/2017760222/#rights-and-access",
+      "permission_summary": "LOC search metadata describes the FSA/OWI collection as public domain and reusable; no file obtained for verification.",
+      "file_access": "Source resource returned HTTP 403 through the web tool. No interactive restriction bypass attempted.",
+      "downloaded": false,
+      "sha256": null,
+      "evaluated": false
+    }
+  ],
+  "workflow": "python -m scripts.prepare_independent_evaluation creates original-byte copies, page previews, coordinate frames and blank manual annotation manifests after explicit permission/origin records. Known project synthetic bytes cannot be attested independent_real."
+}

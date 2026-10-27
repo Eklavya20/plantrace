@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{margin:0;font:14px system-ui,sans-serif;color:#172b3a;background:#f7f8fa} label{display:flex;gap:12px;align-items:center;margin:6px 2px} #viewport{height:390px;overflow:auto;background:#e9eef2;border-radius:6px;padding:4px}canvas{display:block;outline:1px solid #73818b;cursor:crosshair;touch-action:none}canvas:focus{outline:3px solid #147d73}#status{min-height:22px;margin:8px 2px}
+</style></head>
+<body>
+<label for="zoom">Preview zoom <input id="zoom" type="range" min="50" max="250" value="100" step="10"><output id="zoomValue">100%</output></label>
+<div id="viewport"><canvas id="plan" tabindex="0" aria-label="Calibration drawing. Click two endpoints, or use arrow keys and Enter. Shift plus arrow moves ten pixels."></canvas></div>
+<div id="status" role="status">Click two known-dimension endpoints. A third click starts a new reference.</div>
+<script type="module" src="./picker.mjs"></script>
+</body></html>

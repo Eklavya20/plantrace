@@ -1,0 +1,263 @@
+{
+  "datasets": [
+    {
+      "id": "partial_thin_partition",
+      "file": "partial_thin_partition.pdf",
+      "sha256": "a951e093006b63a2aea845450a2e428bc46a670166be6f9b2963b42ae4f68dfc",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored controlled source geometry; no third-party material.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 4.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 4.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    220.0
+                  ]
+                ]
+              },
+              "value_si": 1.2
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall3"
+            ],
+            [
+              "wall0",
+              "wall4"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall2"
+            ],
+            [
+              "room0",
+              "wall3"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room1",
+              "wall0"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall4"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

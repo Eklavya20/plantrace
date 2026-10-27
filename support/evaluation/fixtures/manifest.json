@@ -1,0 +1,3461 @@
+{
+  "schema_version": "stage5-evaluation-1",
+  "datasets": [
+    {
+      "id": "two_rooms",
+      "file": "two_rooms.pdf",
+      "sha256": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall6"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall6"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "door",
+      "file": "door.pdf",
+      "sha256": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    220.0
+                  ]
+                ]
+              },
+              "value_si": 1.2
+            },
+            {
+              "id": "wall7",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    280.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 1.2
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [
+            {
+              "id": "opening0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    220.0
+                  ],
+                  [
+                    300.0,
+                    280.0
+                  ]
+                ]
+              }
+            }
+          ],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall7"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall7"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room0",
+              "wall7"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall7"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [
+            [
+              "opening0",
+              "wall6"
+            ],
+            [
+              "opening0",
+              "wall7"
+            ]
+          ],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decorations",
+      "file": "decorations.pdf",
+      "sha256": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall6"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall6"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endpoint_gap",
+      "file": "endpoint_gap.pdf",
+      "sha256": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    299.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 1.99
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    301.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 1.99
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 4.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 12.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall4"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall1"
+            ],
+            [
+              "room0",
+              "wall2"
+            ],
+            [
+              "room0",
+              "wall3"
+            ],
+            [
+              "room0",
+              "wall4"
+            ]
+          ],
+          "room_adjacency": [],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thin_partition",
+      "file": "thin_partition.pdf",
+      "sha256": "779c05607bf6373d8c82054f6fc57a6eddb12fccd98b2a7682ad0582d0dfb795",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall6"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall6"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dashed_partition",
+      "file": "dashed_partition.pdf",
+      "sha256": "3f49f36bb708620423e2186152a3ce5a8cbb6d74ab43ad67787c21a43e0c26f6",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall6"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall6"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "missing_wall",
+      "file": "missing_wall.pdf",
+      "sha256": "6d5e4029b30400dee8429e9c8ed0f31a0b9b2653993c97b4612d378146032426",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 4.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 4.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall3"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall2"
+            ],
+            [
+              "room0",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall0"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "invalid_graphic",
+      "file": "invalid_graphic.pdf",
+      "sha256": "adb856e0f65589bbac115920c386e2a4d0abffe031826477e74d3ec1e04e27ba",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [],
+          "rooms": [],
+          "openings": [],
+          "wall_connectivity": [],
+          "room_boundary": [],
+          "room_adjacency": [],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rotated_cropped",
+      "file": "rotated_cropped.pdf",
+      "sha256": "37008be84a02b4b196c779521686c19be0380b3e5d4df06c26c3a5d2e7352258",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    50.0,
+                    50.0
+                  ],
+                  [
+                    250.0,
+                    50.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    250.0,
+                    50.0
+                  ],
+                  [
+                    450.0,
+                    50.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    450.0,
+                    50.0
+                  ],
+                  [
+                    450.0,
+                    350.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    450.0,
+                    350.0
+                  ],
+                  [
+                    250.0,
+                    350.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    250.0,
+                    350.0
+                  ],
+                  [
+                    50.0,
+                    350.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    50.0,
+                    350.0
+                  ],
+                  [
+                    50.0,
+                    50.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    250.0,
+                    50.0
+                  ],
+                  [
+                    250.0,
+                    350.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      50.0,
+                      50.0
+                    ],
+                    [
+                      250.0,
+                      50.0
+                    ],
+                    [
+                      250.0,
+                      350.0
+                    ],
+                    [
+                      50.0,
+                      350.0
+                    ],
+                    [
+                      50.0,
+                      50.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      250.0,
+                      50.0
+                    ],
+                    [
+                      450.0,
+                      50.0
+                    ],
+                    [
+                      450.0,
+                      350.0
+                    ],
+                    [
+                      250.0,
+                      350.0
+                    ],
+                    [
+                      250.0,
+                      50.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall6"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall6"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  50,
+                  50
+                ],
+                [
+                  450,
+                  50
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  50,
+                  50
+                ],
+                [
+                  50,
+                  350
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multipage",
+      "file": "multipage.pdf",
+      "sha256": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7",
+      "origin": "generated_synthetic",
+      "permission": "Project-authored synthetic data for this repository's evaluation; no third-party source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall6"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall6"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        },
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    220.0
+                  ]
+                ]
+              },
+              "value_si": 1.2
+            },
+            {
+              "id": "wall7",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    280.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 1.2
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [
+            {
+              "id": "opening0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    220.0
+                  ],
+                  [
+                    300.0,
+                    280.0
+                  ]
+                ]
+              }
+            }
+          ],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall7"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall7"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room0",
+              "wall7"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall7"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [
+            [
+              "opening0",
+              "wall6"
+            ],
+            [
+              "opening0",
+              "wall7"
+            ]
+          ],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "original",
+      "file": "../../../examples/synthetic_plan.pdf",
+      "sha256": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+      "origin": "existing_synthetic",
+      "permission": "Project-authored fixture.",
+      "si_basis": "Explicit test assumptions (4 m/400 points and 3 m/300 points); not dimensions recovered from source.",
+      "pages": [
+        {
+          "walls": [
+            {
+              "id": "wall0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall1",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall2",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    100.0
+                  ],
+                  [
+                    500.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall3",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    500.0,
+                    400.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall4",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 2.0
+            },
+            {
+              "id": "wall5",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    100.0,
+                    400.0
+                  ],
+                  [
+                    100.0,
+                    100.0
+                  ]
+                ]
+              },
+              "value_si": 3.0
+            },
+            {
+              "id": "wall6",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    100.0
+                  ],
+                  [
+                    300.0,
+                    220.0
+                  ]
+                ]
+              },
+              "value_si": 1.2
+            },
+            {
+              "id": "wall7",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    280.0
+                  ],
+                  [
+                    300.0,
+                    400.0
+                  ]
+                ]
+              },
+              "value_si": 1.2
+            }
+          ],
+          "rooms": [
+            {
+              "id": "room0",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      100.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      400.0
+                    ],
+                    [
+                      100.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            },
+            {
+              "id": "room1",
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [
+                      300.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      100.0
+                    ],
+                    [
+                      500.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      400.0
+                    ],
+                    [
+                      300.0,
+                      100.0
+                    ]
+                  ]
+                ]
+              },
+              "value_si": 6.0
+            }
+          ],
+          "openings": [
+            {
+              "id": "opening0",
+              "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                  [
+                    300.0,
+                    220.0
+                  ],
+                  [
+                    300.0,
+                    280.0
+                  ]
+                ]
+              }
+            }
+          ],
+          "wall_connectivity": [
+            [
+              "wall0",
+              "wall1"
+            ],
+            [
+              "wall0",
+              "wall5"
+            ],
+            [
+              "wall0",
+              "wall6"
+            ],
+            [
+              "wall1",
+              "wall2"
+            ],
+            [
+              "wall1",
+              "wall6"
+            ],
+            [
+              "wall2",
+              "wall3"
+            ],
+            [
+              "wall3",
+              "wall4"
+            ],
+            [
+              "wall3",
+              "wall7"
+            ],
+            [
+              "wall4",
+              "wall5"
+            ],
+            [
+              "wall4",
+              "wall7"
+            ]
+          ],
+          "room_boundary": [
+            [
+              "room0",
+              "wall0"
+            ],
+            [
+              "room0",
+              "wall4"
+            ],
+            [
+              "room0",
+              "wall5"
+            ],
+            [
+              "room0",
+              "wall6"
+            ],
+            [
+              "room0",
+              "wall7"
+            ],
+            [
+              "room1",
+              "wall1"
+            ],
+            [
+              "room1",
+              "wall2"
+            ],
+            [
+              "room1",
+              "wall3"
+            ],
+            [
+              "room1",
+              "wall6"
+            ],
+            [
+              "room1",
+              "wall7"
+            ]
+          ],
+          "room_adjacency": [
+            [
+              "room0",
+              "room1"
+            ]
+          ],
+          "opening_host": [
+            [
+              "opening0",
+              "wall6"
+            ],
+            [
+              "opening0",
+              "wall7"
+            ]
+          ],
+          "scale_m_per_unit": 0.01,
+          "references": [
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  500,
+                  100
+                ]
+              ],
+              "distance": 4,
+              "unit": "m",
+              "label": "designed horizontal"
+            },
+            {
+              "points": [
+                [
+                  100,
+                  100
+                ],
+                [
+                  100,
+                  400
+                ]
+              ],
+              "distance": 3,
+              "unit": "m",
+              "label": "designed vertical"
+            }
+          ]
+        },
+        {
+          "rooms": null,
+          "walls": null,
+          "openings": null,
+          "references": []
+        }
+      ]
+    }
+  ]
+}

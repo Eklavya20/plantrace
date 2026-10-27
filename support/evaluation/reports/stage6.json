@@ -1,0 +1,5018 @@
+{
+  "schema_version": "stage6-evaluation-1",
+  "created_at": "2026-10-27T20:45:17.878300+00:00",
+  "implementation_sha256": {
+    "plantrace/calibration.py": "6b554227da6978cadba8ca9c9aa40b79ad638d905526dcd7ca72553cb52b8f6d",
+    "plantrace/metrology_models.py": "8d723f2377b9e796d9d05f14000568be5875cb89a0785406377c4683b7de3bfb",
+    "plantrace/measurements.py": "8b047015127a792bb1a04c4d1c4364676f26c21e8d736c9495ebd76486ffc3f7",
+    "plantrace/source_audit.py": "2046ba594934ab27650ac8030b592e261967da467c5f072b75ee8aaeea5d7125",
+    "plantrace/gates.py": "5b8996d08a102ffd71938f89a84f6a7d8242d50188496c7c505c2483af09f308",
+    "plantrace/candidates.py": "fe187b280636583d58e5c2d87578d8f8a1bac71e96cf313302db3e2780072470",
+    "plantrace/candidate_models.py": "23103a67c8090460c06ebdff44c6b937aa266d215520b34cafa60f71669c17cf",
+    "plantrace/repository.py": "243c3325505374c31620d6e403de91fcdb94b6504d06cba01be2af72b07edd2a",
+    "plantrace/model_validation.py": "ef040de77192fd26a68c09e8e5559fbc43342f68730319c5a6326978a4fd7846",
+    "plantrace/metrology_ui.py": "0b7e6e28d2f846b5efc89450cef9a82cdbe09c5873dd3f770b1a4f56a026d91a",
+    "plantrace/assembly.py": "2508f45ba03a2443cacd17d376db24871f3ae5dcbf198968299eb0c19f3cb46d",
+    "plantrace/review_ui.py": "3947014d0d1edaf8ff9e3dfef5644f8be6d0a64ffaa9d87500934dfa477b5eba",
+    "plantrace/session_review.py": "e8d11fcec3dcb48dfff6f11880c2cf422f5328abaa49b6afd2b793b96a76c666",
+    "scripts/evaluate_stage6.py": "900529d0ffea8bd38a5de8aebe531ba8544bbef131867417a9a0967a1aeb6d1e",
+    "scripts/prepare_independent_evaluation.py": "cd757794bc6a3197e89eb197f321c62875dec989776bd59ab101ee6fe46b983a"
+  },
+  "regression_evaluation": {
+    "schema_version": "stage5-evaluation-1",
+    "created_at": "2026-10-27T20:45:17.660259+00:00",
+    "implementation_sha256": {
+      "plantrace/candidates.py": "fe187b280636583d58e5c2d87578d8f8a1bac71e96cf313302db3e2780072470",
+      "plantrace/measurements.py": "8b047015127a792bb1a04c4d1c4364676f26c21e8d736c9495ebd76486ffc3f7",
+      "plantrace/assembly.py": "2508f45ba03a2443cacd17d376db24871f3ae5dcbf198968299eb0c19f3cb46d",
+      "plantrace/evaluation.py": "f88a1ca99b0678fab289a792be4c7b30d9bc113037d8a08d10cf602a2392e961",
+      "scripts/stage5_fixtures.py": "fad6383abaae97da973041415cc1a651720dd182c43c1e51bbbec6bafaabb69c",
+      "scripts/stage5_failures.py": "4496c7f2e0e90b6e1c90f1924167bb058bfad9a54bc0dd3a8070e4cb3317a7cb",
+      "scripts/evaluate_stage5.py": "74db58a938df66e055893e030f60f5d3a05b353d2f9d77cc6e3882dcaa8c3362",
+      "scripts/demo_stage5.py": "18f20ecff4b075615e73d8fc1fedf26238945432bff41f355b3a922c5f9549b0"
+    },
+    "dataset_manifest": {
+      "file": "support\\artifacts\\review-evaluation\\evaluation\\fixtures\\manifest.json",
+      "sha256": "4d08c7b35c4a3b359b8f39325141e97e1ed9de8e536ab678ae5df482cc7345a4"
+    },
+    "runtime": {
+      "plantrace": "0.6.0",
+      "python": "3.11.18",
+      "pymupdf": "1.28.2",
+      "shapely": "2.2.0",
+      "geos": "3.14.1",
+      "pydantic": "2.14.1"
+    },
+    "matching": {
+      "room_iou_threshold": 0.5,
+      "line_hausdorff_tolerance_pdf_points": 0.01,
+      "assignment": "maximum cardinality, then maximum similarity; one-to-one",
+      "p95": "linear interpolation at (n-1)*0.95"
+    },
+    "pages": [
+      {
+        "dataset": "two_rooms",
+        "origin": "generated_synthetic",
+        "sha256": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:room:a47cdbdb832c3a1b",
+                "label_id": "room0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:room:f3aedd3ee6f1f0d7",
+                "label_id": "room1",
+                "similarity": 1.0
+              }
+            ],
+            "matched_polygon_iou_mean": 1.0,
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 2,
+              "eligible_predictions": 2,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 7,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 7,
+            "labels": 7,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:wall:07a8ba1412282b5f",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:wall:65768fdfa5248e79",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:wall:f8a617b164baa8d9",
+                "label_id": "wall4",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:wall:f5f49a40237589a6",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:wall:4a00a4467c282956",
+                "label_id": "wall1",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:wall:9299a2d7a571d620",
+                "label_id": "wall6",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:wall:f9955421c549e397",
+                "label_id": "wall3",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 7,
+              "labelled_objects": 7,
+              "eligible_predictions": 7,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 8,
+            "labels": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 9,
+            "unresolved": 0,
+            "measurements": 9,
+            "needs_review": 9,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": 0.0,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": []
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 2,
+          "labels": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matches": [
+            {
+              "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:room:a47cdbdb832c3a1b",
+              "label_id": "room0",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "6524ec27d86a667c2bf461129e7066eaecf8fd4712f8e76b07cb35db5884658d:p1:room:f3aedd3ee6f1f0d7",
+              "label_id": "room1",
+              "similarity": 1.0
+            }
+          ],
+          "matched_polygon_iou_mean": 1.0,
+          "si_errors": {
+            "samples": 2,
+            "labelled_objects": 2,
+            "eligible_predictions": 2,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0,
+              0.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "door",
+        "origin": "generated_synthetic",
+        "sha256": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:room:aaf4a3aca472e043",
+                "label_id": "room0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:room:7ba23c5c4ea32a92",
+                "label_id": "room1",
+                "similarity": 1.0
+              }
+            ],
+            "matched_polygon_iou_mean": 1.0,
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 2,
+              "eligible_predictions": 2,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 8,
+            "labels": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:wall:10b20d211f58b070",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:wall:f621de80200fda7d",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:wall:050da9a5d260c630",
+                "label_id": "wall4",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:wall:1ced537fb2ee7cbf",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:wall:497c2186aba29cca",
+                "label_id": "wall1",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:wall:ad7837c5fd35ff00",
+                "label_id": "wall6",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:wall:f9834eba81007b91",
+                "label_id": "wall3",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:wall:905a7373cbfb2a18",
+                "label_id": "wall7",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 8,
+              "labelled_objects": 8,
+              "eligible_predictions": 8,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:opening:cda0a7609b5165f4",
+                "label_id": "opening0",
+                "similarity": 1.0
+              }
+            ]
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 1,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 1,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 11,
+            "unresolved": 1,
+            "measurements": 10,
+            "needs_review": 10,
+            "unavailable_si": 0,
+            "inferred_measurements": 2,
+            "unresolved_rate": 0.09090909090909091,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": [
+            "thin_stroke"
+          ]
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 2,
+          "labels": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matches": [
+            {
+              "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:room:aaf4a3aca472e043",
+              "label_id": "room0",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "3425cdb4e2a655d096affdfd3c462e96a8bbc0b7962e2328635f35b1e50a324b:p1:room:7ba23c5c4ea32a92",
+              "label_id": "room1",
+              "similarity": 1.0
+            }
+          ],
+          "matched_polygon_iou_mean": 1.0,
+          "si_errors": {
+            "samples": 2,
+            "labelled_objects": 2,
+            "eligible_predictions": 2,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0,
+              0.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "decorations",
+        "origin": "generated_synthetic",
+        "sha256": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 2,
+            "fp": 1,
+            "fn": 0,
+            "predictions": 3,
+            "labels": 2,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "matches": [
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:room:b46fa2b446424f3e",
+                "label_id": "room0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:room:dcd5d42af712e86f",
+                "label_id": "room1",
+                "similarity": 1.0
+              }
+            ],
+            "matched_polygon_iou_mean": 1.0,
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 2,
+              "eligible_predictions": 3,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 7,
+            "fp": 9,
+            "fn": 0,
+            "predictions": 16,
+            "labels": 7,
+            "precision": 0.4375,
+            "recall": 1.0,
+            "f1": 0.6086956521739131,
+            "matches": [
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:wall:8f9dc3c8e2c88e99",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:wall:9b5ba82d01293af7",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:wall:b449028525772194",
+                "label_id": "wall4",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:wall:8eea3516147b1b74",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:wall:5ab3589fe11402f8",
+                "label_id": "wall1",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:wall:ceb96843b6b43423",
+                "label_id": "wall6",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:wall:fc259970713e3044",
+                "label_id": "wall3",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 7,
+              "labelled_objects": 7,
+              "eligible_predictions": 16,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 10,
+            "fp": 8,
+            "fn": 0,
+            "predictions": 18,
+            "labels": 10,
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 8,
+            "fp": 4,
+            "fn": 0,
+            "predictions": 12,
+            "labels": 8,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 19,
+            "unresolved": 10,
+            "measurements": 19,
+            "needs_review": 19,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": 0.5263157894736842,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": [
+            "dangling_boundaries",
+            "isolated_closed_graphic_ambiguous",
+            "small_or_narrow_enclosure",
+            "thin_stroke"
+          ]
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 3,
+          "labels": 2,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "matches": [
+            {
+              "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:room:b46fa2b446424f3e",
+              "label_id": "room0",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "1172650bf0c9f5fa3900db70f369d77ccd82a30ad481a04fdfb9d0460b9599af:p1:room:dcd5d42af712e86f",
+              "label_id": "room1",
+              "similarity": 1.0
+            }
+          ],
+          "matched_polygon_iou_mean": 1.0,
+          "si_errors": {
+            "samples": 2,
+            "labelled_objects": 2,
+            "eligible_predictions": 3,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0,
+              0.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "endpoint_gap",
+        "origin": "generated_synthetic",
+        "sha256": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35:p1:room:a9d24b753a66fffb",
+                "label_id": "room0",
+                "similarity": 1.0
+              }
+            ],
+            "matched_polygon_iou_mean": 1.0,
+            "si_errors": {
+              "samples": 1,
+              "labelled_objects": 1,
+              "eligible_predictions": 1,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 5,
+            "labels": 5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35:p1:wall:dacbce1d45780b21",
+                "label_id": "wall4",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35:p1:wall:0ed72f503b3bb93b",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35:p1:wall:b0e29fbce4f38107",
+                "label_id": "wall3",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35:p1:wall:fb04dbb082e83eff",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35:p1:wall:9dd161ad4f5b2d6e",
+                "label_id": "wall1",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 5,
+              "labelled_objects": 5,
+              "eligible_predictions": 5,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 4,
+            "labels": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 5,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 5,
+            "labels": 5,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 6,
+            "unresolved": 0,
+            "measurements": 6,
+            "needs_review": 6,
+            "unavailable_si": 0,
+            "inferred_measurements": 1,
+            "unresolved_rate": 0.0,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": []
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "labels": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matches": [
+            {
+              "candidate_id": "882c9a3e5d000e4e0afab60c7bccb665d4d7866ed16fed517104968df75c8c35:p1:room:a9d24b753a66fffb",
+              "label_id": "room0",
+              "similarity": 1.0
+            }
+          ],
+          "matched_polygon_iou_mean": 1.0,
+          "si_errors": {
+            "samples": 1,
+            "labelled_objects": 1,
+            "eligible_predictions": 1,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "thin_partition",
+        "origin": "generated_synthetic",
+        "sha256": "779c05607bf6373d8c82054f6fc57a6eddb12fccd98b2a7682ad0582d0dfb795",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "predictions": 1,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "matches": [
+              {
+                "candidate_id": "779c05607bf6373d8c82054f6fc57a6eddb12fccd98b2a7682ad0582d0dfb795:p1:room:02f1f0633fa9ddb8",
+                "label_id": "room0",
+                "similarity": 0.5
+              }
+            ],
+            "matched_polygon_iou_mean": 0.5,
+            "si_errors": {
+              "samples": 1,
+              "labelled_objects": 2,
+              "eligible_predictions": 1,
+              "mae": 6.0,
+              "p95_linear": 6.0,
+              "absolute_errors": [
+                6.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 2,
+            "fp": 2,
+            "fn": 5,
+            "predictions": 4,
+            "labels": 7,
+            "precision": 0.5,
+            "recall": 0.2857142857142857,
+            "f1": 0.36363636363636365,
+            "matches": [
+              {
+                "candidate_id": "779c05607bf6373d8c82054f6fc57a6eddb12fccd98b2a7682ad0582d0dfb795:p1:wall:0661f39292c43765",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "779c05607bf6373d8c82054f6fc57a6eddb12fccd98b2a7682ad0582d0dfb795:p1:wall:b46c988a09d109b4",
+                "label_id": "wall2",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 7,
+              "eligible_predictions": 4,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 0,
+            "fp": 4,
+            "fn": 10,
+            "predictions": 4,
+            "labels": 10,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "predictions": 0,
+            "labels": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 1,
+            "fp": 3,
+            "fn": 7,
+            "predictions": 4,
+            "labels": 8,
+            "precision": 0.25,
+            "recall": 0.125,
+            "f1": 0.16666666666666666,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 5,
+            "unresolved": 1,
+            "measurements": 5,
+            "needs_review": 5,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": 0.2,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": [
+            "ignored_stroke_possible_partition",
+            "possible_missed_source_wall",
+            "thin_stroke"
+          ]
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "predictions": 1,
+          "labels": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "matches": [],
+          "matched_polygon_iou_mean": null,
+          "si_errors": {
+            "samples": 0,
+            "labelled_objects": 2,
+            "eligible_predictions": 1,
+            "mae": null,
+            "p95_linear": null,
+            "absolute_errors": [],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "dashed_partition",
+        "origin": "generated_synthetic",
+        "sha256": "3f49f36bb708620423e2186152a3ce5a8cbb6d74ab43ad67787c21a43e0c26f6",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "predictions": 1,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "matches": [
+              {
+                "candidate_id": "3f49f36bb708620423e2186152a3ce5a8cbb6d74ab43ad67787c21a43e0c26f6:p1:room:2a6140d3951638b2",
+                "label_id": "room0",
+                "similarity": 0.5
+              }
+            ],
+            "matched_polygon_iou_mean": 0.5,
+            "si_errors": {
+              "samples": 1,
+              "labelled_objects": 2,
+              "eligible_predictions": 1,
+              "mae": 6.0,
+              "p95_linear": 6.0,
+              "absolute_errors": [
+                6.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 2,
+            "fp": 2,
+            "fn": 5,
+            "predictions": 4,
+            "labels": 7,
+            "precision": 0.5,
+            "recall": 0.2857142857142857,
+            "f1": 0.36363636363636365,
+            "matches": [
+              {
+                "candidate_id": "3f49f36bb708620423e2186152a3ce5a8cbb6d74ab43ad67787c21a43e0c26f6:p1:wall:ed5b5409f69b1d58",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "3f49f36bb708620423e2186152a3ce5a8cbb6d74ab43ad67787c21a43e0c26f6:p1:wall:d3ee1170171a9c24",
+                "label_id": "wall2",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 7,
+              "eligible_predictions": 4,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 0,
+            "fp": 4,
+            "fn": 10,
+            "predictions": 4,
+            "labels": 10,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "predictions": 0,
+            "labels": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 1,
+            "fp": 3,
+            "fn": 7,
+            "predictions": 4,
+            "labels": 8,
+            "precision": 0.25,
+            "recall": 0.125,
+            "f1": 0.16666666666666666,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 5,
+            "unresolved": 1,
+            "measurements": 5,
+            "needs_review": 5,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": 0.2,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": [
+            "dashed_path",
+            "ignored_stroke_possible_partition",
+            "possible_missed_source_wall"
+          ]
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "predictions": 1,
+          "labels": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "matches": [],
+          "matched_polygon_iou_mean": null,
+          "si_errors": {
+            "samples": 0,
+            "labelled_objects": 2,
+            "eligible_predictions": 1,
+            "mae": null,
+            "p95_linear": null,
+            "absolute_errors": [],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "missing_wall",
+        "origin": "generated_synthetic",
+        "sha256": "6d5e4029b30400dee8429e9c8ed0f31a0b9b2653993c97b4612d378146032426",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 1,
+            "predictions": 1,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "matches": [
+              {
+                "candidate_id": "6d5e4029b30400dee8429e9c8ed0f31a0b9b2653993c97b4612d378146032426:p1:room:0762049a1c9e86aa",
+                "label_id": "room0",
+                "similarity": 0.5
+              }
+            ],
+            "matched_polygon_iou_mean": 0.5,
+            "si_errors": {
+              "samples": 1,
+              "labelled_objects": 2,
+              "eligible_predictions": 1,
+              "mae": 6.0,
+              "p95_linear": 6.0,
+              "absolute_errors": [
+                6.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 4,
+            "labels": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "6d5e4029b30400dee8429e9c8ed0f31a0b9b2653993c97b4612d378146032426:p1:wall:36f3bd1cebdde0be",
+                "label_id": "wall3",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6d5e4029b30400dee8429e9c8ed0f31a0b9b2653993c97b4612d378146032426:p1:wall:e210d5d894f7bc10",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6d5e4029b30400dee8429e9c8ed0f31a0b9b2653993c97b4612d378146032426:p1:wall:3b558183fb8c0e23",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "6d5e4029b30400dee8429e9c8ed0f31a0b9b2653993c97b4612d378146032426:p1:wall:2b149d32b9d6552d",
+                "label_id": "wall1",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 4,
+              "labelled_objects": 4,
+              "eligible_predictions": 4,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 4,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 4,
+            "labels": 4,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1,
+            "predictions": 0,
+            "labels": 1,
+            "precision": null,
+            "recall": 0.0,
+            "f1": 0.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 3,
+            "fp": 1,
+            "fn": 3,
+            "predictions": 4,
+            "labels": 6,
+            "precision": 0.75,
+            "recall": 0.5,
+            "f1": 0.6,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 5,
+            "unresolved": 0,
+            "measurements": 5,
+            "needs_review": 5,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": 0.0,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": []
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 0,
+          "fp": 1,
+          "fn": 2,
+          "predictions": 1,
+          "labels": 2,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "matches": [],
+          "matched_polygon_iou_mean": null,
+          "si_errors": {
+            "samples": 0,
+            "labelled_objects": 2,
+            "eligible_predictions": 1,
+            "mae": null,
+            "p95_linear": null,
+            "absolute_errors": [],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "invalid_graphic",
+        "origin": "generated_synthetic",
+        "sha256": "adb856e0f65589bbac115920c386e2a4d0abffe031826477e74d3ec1e04e27ba",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": [],
+            "matched_polygon_iou_mean": null,
+            "si_errors": {
+              "samples": 0,
+              "labelled_objects": 0,
+              "eligible_predictions": 0,
+              "mae": null,
+              "p95_linear": null,
+              "absolute_errors": [],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": [],
+            "si_errors": {
+              "samples": 0,
+              "labelled_objects": 0,
+              "eligible_predictions": 0,
+              "mae": null,
+              "p95_linear": null,
+              "absolute_errors": [],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 0,
+            "unresolved": 0,
+            "measurements": 0,
+            "needs_review": 0,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": null,
+            "needs_review_rate": null
+          },
+          "diagnostics": [
+            "invalid_source_path",
+            "no_supported_walls"
+          ]
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 0,
+          "labels": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matches": [],
+          "matched_polygon_iou_mean": null,
+          "si_errors": {
+            "samples": 0,
+            "labelled_objects": 0,
+            "eligible_predictions": 0,
+            "mae": null,
+            "p95_linear": null,
+            "absolute_errors": [],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "rotated_cropped",
+        "origin": "generated_synthetic",
+        "sha256": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 90,
+        "cropbox": [
+          50.0,
+          50.0,
+          550.0,
+          450.0
+        ],
+        "preview_transform": [
+          2.0,
+          0.0,
+          0.0,
+          2.0,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:room:4aa4067a9835cf75",
+                "label_id": "room0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:room:3d5fec224161e224",
+                "label_id": "room1",
+                "similarity": 1.0
+              }
+            ],
+            "matched_polygon_iou_mean": 1.0,
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 2,
+              "eligible_predictions": 2,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 7,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 7,
+            "labels": 7,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:wall:12843224db8af82e",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:wall:e68013f21a172803",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:wall:b59f6384c1d350a3",
+                "label_id": "wall4",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:wall:4c587d171edf1747",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:wall:a37044cfd1f56120",
+                "label_id": "wall1",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:wall:c7c882f00f3a49f3",
+                "label_id": "wall6",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:wall:5930644f44b65a8c",
+                "label_id": "wall3",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 7,
+              "labelled_objects": 7,
+              "eligible_predictions": 7,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 8,
+            "labels": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 9,
+            "unresolved": 0,
+            "measurements": 9,
+            "needs_review": 9,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": 0.0,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": []
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 2,
+          "labels": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matches": [
+            {
+              "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:room:4aa4067a9835cf75",
+              "label_id": "room0",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "42e63b4ce422b5c85cb86aee5d493cf0a5242aae32b727bb33d26e2776a784f2:p1:room:3d5fec224161e224",
+              "label_id": "room1",
+              "similarity": 1.0
+            }
+          ],
+          "matched_polygon_iou_mean": 1.0,
+          "si_errors": {
+            "samples": 2,
+            "labelled_objects": 2,
+            "eligible_predictions": 2,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0,
+              0.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "multipage",
+        "origin": "generated_synthetic",
+        "sha256": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:room:cdd274dc7f2010d9",
+                "label_id": "room0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:room:c8bcc4b54a1cb348",
+                "label_id": "room1",
+                "similarity": 1.0
+              }
+            ],
+            "matched_polygon_iou_mean": 1.0,
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 2,
+              "eligible_predictions": 2,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 7,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 7,
+            "labels": 7,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:wall:907d9e264e4bac33",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:wall:641ef6059dcaefb6",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:wall:067cdbb6921a59af",
+                "label_id": "wall4",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:wall:bbb35899576178f4",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:wall:3c9e64e1c783ee3f",
+                "label_id": "wall1",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:wall:5c4402bffdd77f8c",
+                "label_id": "wall6",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:wall:d3a0d001e4c133fa",
+                "label_id": "wall3",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 7,
+              "labelled_objects": 7,
+              "eligible_predictions": 7,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "matches": []
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 8,
+            "labels": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 0,
+            "labels": 0,
+            "precision": null,
+            "recall": null,
+            "f1": null,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 0,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 9,
+            "unresolved": 0,
+            "measurements": 9,
+            "needs_review": 9,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": 0.0,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": []
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 2,
+          "labels": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matches": [
+            {
+              "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:room:cdd274dc7f2010d9",
+              "label_id": "room0",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p1:room:c8bcc4b54a1cb348",
+              "label_id": "room1",
+              "similarity": 1.0
+            }
+          ],
+          "matched_polygon_iou_mean": 1.0,
+          "si_errors": {
+            "samples": 2,
+            "labelled_objects": 2,
+            "eligible_predictions": 2,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0,
+              0.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "multipage",
+        "origin": "generated_synthetic",
+        "sha256": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7",
+        "page": 2,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:room:47d3d0fad7ab120e",
+                "label_id": "room0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:room:02d00c89be2d0620",
+                "label_id": "room1",
+                "similarity": 1.0
+              }
+            ],
+            "matched_polygon_iou_mean": 1.0,
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 2,
+              "eligible_predictions": 2,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 8,
+            "labels": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:wall:003bfcb4a37a0d53",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:wall:7d4869114c7deefe",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:wall:339bcd98dcbda9dc",
+                "label_id": "wall4",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:wall:68d7ed0f7a858a0b",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:wall:162726f12eb4b82e",
+                "label_id": "wall1",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:wall:927de29d9cd8714b",
+                "label_id": "wall6",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:wall:4b61815eb56ac195",
+                "label_id": "wall3",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:wall:8688e25bfef290a9",
+                "label_id": "wall7",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 8,
+              "labelled_objects": 8,
+              "eligible_predictions": 8,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:opening:b6572781f87ebdf6",
+                "label_id": "opening0",
+                "similarity": 1.0
+              }
+            ]
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 1,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 1,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 11,
+            "unresolved": 1,
+            "measurements": 10,
+            "needs_review": 10,
+            "unavailable_si": 0,
+            "inferred_measurements": 2,
+            "unresolved_rate": 0.09090909090909091,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": [
+            "thin_stroke"
+          ]
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 2,
+          "labels": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matches": [
+            {
+              "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:room:47d3d0fad7ab120e",
+              "label_id": "room0",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "a9ec1126cf714891d8c55d37081cba0f70c99170f63c13d7a981ecdccd669bf7:p2:room:02d00c89be2d0620",
+              "label_id": "room1",
+              "similarity": 1.0
+            }
+          ],
+          "matched_polygon_iou_mean": 1.0,
+          "si_errors": {
+            "samples": 2,
+            "labelled_objects": 2,
+            "eligible_predictions": 2,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0,
+              0.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "original",
+        "origin": "existing_synthetic",
+        "sha256": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+        "page": 1,
+        "content_kind": "vector",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:room:ba301b594cbef2be",
+                "label_id": "room0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:room:2e44ccc1a6c31919",
+                "label_id": "room1",
+                "similarity": 1.0
+              }
+            ],
+            "matched_polygon_iou_mean": 1.0,
+            "si_errors": {
+              "samples": 2,
+              "labelled_objects": 2,
+              "eligible_predictions": 2,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0
+              ],
+              "unit": "m2"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "wall": {
+            "available": true,
+            "tp": 8,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 8,
+            "labels": 8,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:74594ecc5b6cb7a6",
+                "label_id": "wall5",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:dbced54358cc1103",
+                "label_id": "wall0",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:0ee789b2d08a06dd",
+                "label_id": "wall4",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:2e768c680f6870cc",
+                "label_id": "wall2",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:b1b4195a541aef30",
+                "label_id": "wall1",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:60a3f726de01dbb6",
+                "label_id": "wall6",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:1a62737c113ff8a5",
+                "label_id": "wall3",
+                "similarity": 1.0
+              },
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:f6a46ddda7ba0e02",
+                "label_id": "wall7",
+                "similarity": 1.0
+              }
+            ],
+            "si_errors": {
+              "samples": 8,
+              "labelled_objects": 8,
+              "eligible_predictions": 8,
+              "mae": 0.0,
+              "p95_linear": 0.0,
+              "absolute_errors": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "unit": "m"
+            },
+            "approval_gate": {
+              "eligible": 0,
+              "eligible_unmatched_predictions": 0,
+              "materially_wrong_matched_values_eligible": 0,
+              "material_error_threshold_relative": 0.05
+            }
+          },
+          "opening": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "matches": [
+              {
+                "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:opening:f319d121e532eee6",
+                "label_id": "opening0",
+                "similarity": 1.0
+              }
+            ]
+          },
+          "wall_connectivity": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_adjacency": {
+            "available": true,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 1,
+            "labels": 1,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "room_boundary": {
+            "available": true,
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 10,
+            "labels": 10,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "geometry-derived relationships"
+          },
+          "opening_host": {
+            "available": true,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0,
+            "predictions": 2,
+            "labels": 2,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+          },
+          "opening_host_assignments": {
+            "labels_available": true,
+            "opening_labels": 1,
+            "manual_assignments": 0,
+            "correct_supported_assignments": 0,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 1,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "cross_checked": 1
+            },
+            "relative_scale_errors": [
+              0.0
+            ],
+            "reference_residuals_m": [
+              0.0,
+              0.0
+            ]
+          },
+          "review": {
+            "candidates": 11,
+            "unresolved": 1,
+            "measurements": 10,
+            "needs_review": 10,
+            "unavailable_si": 0,
+            "inferred_measurements": 2,
+            "unresolved_rate": 0.09090909090909091,
+            "needs_review_rate": 1.0
+          },
+          "diagnostics": [
+            "thin_stroke"
+          ]
+        },
+        "room_strict_iou_075": {
+          "available": true,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 2,
+          "labels": 2,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "matches": [
+            {
+              "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:room:ba301b594cbef2be",
+              "label_id": "room0",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:room:2e44ccc1a6c31919",
+              "label_id": "room1",
+              "similarity": 1.0
+            }
+          ],
+          "matched_polygon_iou_mean": 1.0,
+          "si_errors": {
+            "samples": 2,
+            "labelled_objects": 2,
+            "eligible_predictions": 2,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0,
+              0.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        }
+      },
+      {
+        "dataset": "original",
+        "origin": "existing_synthetic",
+        "sha256": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+        "page": 2,
+        "content_kind": "raster",
+        "original_rotation": 0,
+        "cropbox": [
+          0.0,
+          0.0,
+          600.0,
+          500.0
+        ],
+        "preview_transform": [
+          1.6666666666666667,
+          0.0,
+          0.0,
+          1.6666666666666667,
+          0.0,
+          0.0
+        ],
+        "metrics": {
+          "room": {
+            "available": false,
+            "reason": "Ground truth unavailable",
+            "predictions": 0
+          },
+          "wall": {
+            "available": false,
+            "reason": "Ground truth unavailable",
+            "predictions": 0
+          },
+          "opening": {
+            "available": false,
+            "reason": "Ground truth unavailable",
+            "predictions": 0
+          },
+          "wall_connectivity": {
+            "available": false,
+            "reason": "Relationship labels unavailable",
+            "predictions": 0
+          },
+          "room_adjacency": {
+            "available": false,
+            "reason": "Relationship labels unavailable",
+            "predictions": 0
+          },
+          "room_boundary": {
+            "available": false,
+            "reason": "Relationship labels unavailable",
+            "predictions": 0
+          },
+          "opening_host": {
+            "available": false,
+            "reason": "Relationship labels unavailable",
+            "predictions": 0
+          },
+          "opening_host_assignments": {
+            "labels_available": false,
+            "opening_labels": null,
+            "manual_assignments": 0,
+            "correct_supported_assignments": null,
+            "accuracy_on_assignments": null,
+            "confirmed_assignments": 0,
+            "unresolved_opening_candidates": 0,
+            "confirmed_host_accuracy": null,
+            "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+          },
+          "calibration": {
+            "regions": 1,
+            "conflicting": 0,
+            "status_counts": {
+              "missing": 1
+            },
+            "relative_scale_errors": null,
+            "reference_residuals_m": []
+          },
+          "review": {
+            "candidates": 0,
+            "unresolved": 0,
+            "measurements": 0,
+            "needs_review": 0,
+            "unavailable_si": 0,
+            "inferred_measurements": 0,
+            "unresolved_rate": null,
+            "needs_review_rate": null
+          },
+          "diagnostics": [
+            "no_vector_geometry"
+          ]
+        },
+        "room_strict_iou_075": {
+          "available": false,
+          "reason": "Ground truth unavailable",
+          "predictions": 0
+        }
+      }
+    ],
+    "aggregate_synthetic": {
+      "room": {
+        "labelled_pages": 12,
+        "unlabelled_pages": 1,
+        "tp": 18,
+        "fp": 1,
+        "fn": 3,
+        "predictions": 19,
+        "labels": 21,
+        "precision": 0.9473684210526315,
+        "recall": 0.8571428571428571,
+        "f1": 0.9,
+        "matched_polygon_iou_mean": 0.9166666666666666,
+        "si_errors": {
+          "samples": 18,
+          "labelled_objects": 21,
+          "eligible_predictions": 19,
+          "mae": 1.0,
+          "p95_linear": 6.0,
+          "absolute_errors": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            6.0,
+            6.0,
+            6.0
+          ]
+        },
+        "approval_gate": {
+          "eligible": 0,
+          "eligible_unmatched_predictions": 0,
+          "materially_wrong_matched_values_eligible": 0
+        }
+      },
+      "wall": {
+        "labelled_pages": 12,
+        "unlabelled_pages": 1,
+        "tp": 65,
+        "fp": 13,
+        "fn": 10,
+        "predictions": 78,
+        "labels": 75,
+        "precision": 0.8333333333333334,
+        "recall": 0.8666666666666667,
+        "f1": 0.8496732026143791,
+        "si_errors": {
+          "samples": 65,
+          "labelled_objects": 75,
+          "eligible_predictions": 78,
+          "mae": 0.0,
+          "p95_linear": 0.0,
+          "absolute_errors": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "approval_gate": {
+          "eligible": 0,
+          "eligible_unmatched_predictions": 0,
+          "materially_wrong_matched_values_eligible": 0
+        }
+      },
+      "opening": {
+        "labelled_pages": 12,
+        "unlabelled_pages": 1,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "predictions": 3,
+        "labels": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "wall_connectivity": {
+        "labelled_pages": 12,
+        "unlabelled_pages": 1,
+        "tp": 78,
+        "fp": 16,
+        "fn": 20,
+        "predictions": 94,
+        "labels": 98,
+        "precision": 0.8297872340425532,
+        "recall": 0.7959183673469388,
+        "f1": 0.8125
+      },
+      "room_adjacency": {
+        "labelled_pages": 12,
+        "unlabelled_pages": 1,
+        "tp": 7,
+        "fp": 0,
+        "fn": 3,
+        "predictions": 7,
+        "labels": 10,
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1": 0.8235294117647058
+      },
+      "room_boundary": {
+        "labelled_pages": 12,
+        "unlabelled_pages": 1,
+        "tp": 72,
+        "fp": 11,
+        "fn": 17,
+        "predictions": 83,
+        "labels": 89,
+        "precision": 0.8674698795180723,
+        "recall": 0.8089887640449438,
+        "f1": 0.8372093023255814
+      },
+      "opening_host": {
+        "labelled_pages": 12,
+        "unlabelled_pages": 1,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "predictions": 6,
+        "labels": 6,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "review": {
+        "candidates": 100,
+        "unresolved": 15,
+        "measurements": 97,
+        "needs_review": 97,
+        "unavailable_si": 0,
+        "inferred_measurements": 7,
+        "unresolved_rate": 0.15,
+        "needs_review_rate": 1.0
+      },
+      "room_strict_iou_075": {
+        "tp": 15,
+        "fp": 4,
+        "fn": 6,
+        "predictions": 19,
+        "labels": 21,
+        "precision": 0.7894736842105263,
+        "recall": 0.7142857142857143,
+        "f1": 0.75
+      },
+      "calibration": {
+        "regions": 13,
+        "conflicting_regions": 0,
+        "ground_truth_scale_regions": 12,
+        "relative_error": {
+          "samples": 12,
+          "labelled_objects": 12,
+          "eligible_predictions": 12,
+          "mae": 0.0,
+          "p95_linear": 0.0,
+          "absolute_errors": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "residual_m": {
+          "samples": 24,
+          "labelled_objects": 24,
+          "eligible_predictions": 24,
+          "mae": 0.0,
+          "p95_linear": 0.0,
+          "absolute_errors": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "opening_host_assignments": {
+        "opening_labels": 3,
+        "manual_assignments": 0,
+        "correct_supported_assignments": 0,
+        "confirmed_assignments": 0,
+        "unresolved_opening_candidates": 3,
+        "accuracy_on_assignments": null,
+        "confirmed_host_accuracy": null
+      }
+    },
+    "aggregate_real": null,
+    "real_plan_coverage": {
+      "evaluated_pages": 0,
+      "reason_if_missing": "No permitted independent architectural drawing downloaded: Wikimedia HTTP 429; LOC interactive challenge. No real detections or SI truth claimed."
+    },
+    "failures": {
+      "scenarios": [
+        {
+          "scenario": "wrong_uniform_scale_10_percent",
+          "outcome": "escalated",
+          "evidence": {
+            "calibration_status": "cross_checked",
+            "wall_measurements": 8,
+            "approval_eligible_wall_measurements": 0,
+            "scale_m_per_unit": 0.011000000000000001,
+            "truth_scale_m_per_unit": 0.01,
+            "manual_measurement_review_created": false,
+            "calibration_correctness": "unverified",
+            "error_detectable_from_supplied_evidence": false,
+            "engineering_handoff_eligible": false
+          },
+          "material_error": true,
+          "detected": false,
+          "blocked": true,
+          "escalated": true,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "conflicting_independent_references",
+          "outcome": "blocked",
+          "evidence": {
+            "calibration_status": "conflicting",
+            "wall_measurements": 8,
+            "approval_eligible_wall_measurements": 0,
+            "scale_m_per_unit": 0.01,
+            "truth_scale_m_per_unit": 0.01,
+            "manual_measurement_review_created": false,
+            "calibration_correctness": "conflicting",
+            "error_detectable_from_supplied_evidence": true,
+            "engineering_handoff_eligible": false
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "incorrect_units_consistently_entered_cm",
+          "outcome": "escalated",
+          "evidence": {
+            "calibration_status": "cross_checked",
+            "wall_measurements": 8,
+            "approval_eligible_wall_measurements": 0,
+            "scale_m_per_unit": 0.0001,
+            "truth_scale_m_per_unit": 0.01,
+            "manual_measurement_review_created": false,
+            "calibration_correctness": "unverified",
+            "error_detectable_from_supplied_evidence": false,
+            "engineering_handoff_eligible": false
+          },
+          "material_error": true,
+          "detected": false,
+          "blocked": true,
+          "escalated": true,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "missing_source_partition",
+          "outcome": "escalated",
+          "evidence": {
+            "expected_space_areas_m2": [
+              6,
+              6
+            ],
+            "aggregate_area_m2": 12.0,
+            "manual_measurement_review_created": false,
+            "explanation": "A wholly absent source partition leaves a valid enclosure. Geometry/calibration alone cannot infer the missing architectural intent."
+          },
+          "material_error": true,
+          "detected": false,
+          "blocked": true,
+          "escalated": true,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "missing_calibration",
+          "outcome": "blocked",
+          "evidence": {
+            "si_values_available": 0,
+            "approval_eligible": 0
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "inferred_room_approval",
+          "outcome": "blocked",
+          "evidence": {
+            "inferred_rooms": 2,
+            "approval_eligible_rooms": 0
+          },
+          "material_error": false,
+          "detected": false,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "concurrent_architect_decision",
+          "outcome": "blocked",
+          "evidence": {
+            "stale_view_rejected": true,
+            "history_preserved": true
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "missing_wall_retained_room",
+          "outcome": "blocked",
+          "evidence": {
+            "issue_codes": [
+              "inferred_room_boundary",
+              "unresolved_opening",
+              "unsupported_room_boundary"
+            ],
+            "withheld_room_values": 1
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "hallucinated_unsupported_room",
+          "outcome": "blocked",
+          "evidence": {
+            "issue_codes": [
+              "inferred_room_boundary",
+              "unresolved_opening",
+              "unsupported_room_boundary"
+            ]
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "wrong_opening_host",
+          "outcome": "blocked",
+          "evidence": {
+            "error": "Host assignment is unsupported by the current effective opening/wall geometry."
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "invalid_bowtie_polygon",
+          "outcome": "blocked",
+          "evidence": {
+            "schema_rejected_self_intersection": true
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "stale_measurements_after_wall_correction",
+          "outcome": "blocked",
+          "evidence": {
+            "withheld_stale_rooms": 1,
+            "historical_export_flagged": true
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "concurrent_workspace_change",
+          "outcome": "blocked",
+          "evidence": {
+            "compare_and_swap_rejected_stale_writer": true
+          },
+          "material_error": true,
+          "detected": true,
+          "blocked": true,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        },
+        {
+          "scenario": "session_restart",
+          "outcome": "detected",
+          "evidence": {
+            "source_bytes_match": true,
+            "correction_persisted": true,
+            "architect_decisions": 1,
+            "model_versions": [
+              1
+            ]
+          },
+          "material_error": false,
+          "detected": false,
+          "blocked": false,
+          "escalated": false,
+          "engineering_gate": {
+            "eligible": false,
+            "disposition": "blocked",
+            "policy": "engineering_handoff_not_implemented_v1",
+            "reasons": [
+              "Formal engineering handoff is not implemented.",
+              "Reference declarations, numerical cross-checking, manual measurement review and provisional assembly are not proof of engineering safety."
+            ]
+          },
+          "unsafe_measurement_gate_acceptance": false
+        }
+      ],
+      "unsafe_acceptance": {
+        "numerator": 0,
+        "denominator": 12,
+        "rate": 0.0,
+        "definition": "Injected material errors reaching a measurement approval gate or accepted unsupported mutation; provisional assembly alone is not verification. Engineering handoff is separately always disabled."
+      },
+      "gate_outcomes": {
+        "material_errors": 12,
+        "detected": 9,
+        "blocked": 12,
+        "escalated": 3,
+        "measurement_review_gate_passes": 0,
+        "engineering_handoff_gate_passes": 0,
+        "intrinsically_undetectable_without_additional_evidence": [
+          "wrong_uniform_scale_10_percent",
+          "incorrect_units_consistently_entered_cm",
+          "missing_source_partition"
+        ],
+        "counts_overlap": "Escalated cases are blocked at the approval gate, but their material error is not detected."
+      }
+    },
+    "end_to_end": {
+      "source_sha256": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+      "calibration_assumptions": "4 m horizontal and 3 m vertical over the extracted outer wall extent; not recovered building dimensions",
+      "initial_candidate_counts": {
+        "wall": 8,
+        "room": 2,
+        "opening": 1
+      },
+      "initial_entity_counts": {
+        "opening": 1,
+        "room": 2,
+        "wall": 8
+      },
+      "initial_relationship_counts": {
+        "opening_host": 2,
+        "room_adjacency": 1,
+        "room_boundary": 10,
+        "room_boundary_hypothesis": 2,
+        "wall_connectivity": 10
+      },
+      "wall_metres_counts": {
+        "3.0": 2,
+        "2.0": 4,
+        "1.2": 2
+      },
+      "room_square_metres": [
+        6.0,
+        6.0
+      ],
+      "room_measurement_states": [
+        "needs_review",
+        "needs_review"
+      ],
+      "restart": {
+        "source_bytes_match": true,
+        "references": 2,
+        "architect_decisions": 1,
+        "host_assignments": 1
+      },
+      "model_versions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "initial_entity_count": 11,
+      "after_edit": {
+        "withheld_stale_room_values": 1,
+        "active_entities": 10,
+        "retired_entities": 2
+      },
+      "engineering_handoff_eligible": false,
+      "database": "support\\artifacts\\review-evaluation\\evaluation\\workflow\\review.sqlite3",
+      "scale_conflict_demo": {
+        "version": 4,
+        "reference_count": 3,
+        "calibration_status": "conflicting",
+        "approval_eligible_measurements": 0,
+        "active_entities": 10,
+        "retired_entities": 2,
+        "conflict_removed_version": 5,
+        "restored_calibration_status": "cross_checked"
+      }
+    }
+  },
+  "additional_pages": [
+    {
+      "dataset": "partial_thin_partition",
+      "origin": "generated_synthetic",
+      "sha256": "a951e093006b63a2aea845450a2e428bc46a670166be6f9b2963b42ae4f68dfc",
+      "page": 1,
+      "content_kind": "vector",
+      "original_rotation": 0,
+      "cropbox": [
+        0.0,
+        0.0,
+        600.0,
+        500.0
+      ],
+      "preview_transform": [
+        1.6666666666666667,
+        0.0,
+        0.0,
+        1.6666666666666667,
+        0.0,
+        0.0
+      ],
+      "metrics": {
+        "room": {
+          "available": true,
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 1,
+          "labels": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "matches": [
+            {
+              "candidate_id": "a951e093006b63a2aea845450a2e428bc46a670166be6f9b2963b42ae4f68dfc:p1:room:4de572e2fdd81b19",
+              "label_id": "room0",
+              "similarity": 0.5
+            }
+          ],
+          "matched_polygon_iou_mean": 0.5,
+          "si_errors": {
+            "samples": 1,
+            "labelled_objects": 2,
+            "eligible_predictions": 1,
+            "mae": 6.0,
+            "p95_linear": 6.0,
+            "absolute_errors": [
+              6.0
+            ],
+            "unit": "m2"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        },
+        "wall": {
+          "available": true,
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 4,
+          "labels": 5,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888,
+          "matches": [
+            {
+              "candidate_id": "a951e093006b63a2aea845450a2e428bc46a670166be6f9b2963b42ae4f68dfc:p1:wall:72a4e94e134508cb",
+              "label_id": "wall3",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "a951e093006b63a2aea845450a2e428bc46a670166be6f9b2963b42ae4f68dfc:p1:wall:5b99dfa647f83fda",
+              "label_id": "wall0",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "a951e093006b63a2aea845450a2e428bc46a670166be6f9b2963b42ae4f68dfc:p1:wall:f3ae8287e71816fe",
+              "label_id": "wall2",
+              "similarity": 1.0
+            },
+            {
+              "candidate_id": "a951e093006b63a2aea845450a2e428bc46a670166be6f9b2963b42ae4f68dfc:p1:wall:05b7b2998b214a78",
+              "label_id": "wall1",
+              "similarity": 1.0
+            }
+          ],
+          "si_errors": {
+            "samples": 4,
+            "labelled_objects": 5,
+            "eligible_predictions": 4,
+            "mae": 0.0,
+            "p95_linear": 0.0,
+            "absolute_errors": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "unit": "m"
+          },
+          "approval_gate": {
+            "eligible": 0,
+            "eligible_unmatched_predictions": 0,
+            "materially_wrong_matched_values_eligible": 0,
+            "material_error_threshold_relative": 0.05
+          }
+        },
+        "opening": {
+          "available": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 0,
+          "labels": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "matches": []
+        },
+        "wall_connectivity": {
+          "available": true,
+          "tp": 4,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 4,
+          "labels": 5,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888,
+          "interpretation": "geometry-derived relationships"
+        },
+        "room_adjacency": {
+          "available": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "labels": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "interpretation": "geometry-derived relationships"
+        },
+        "room_boundary": {
+          "available": true,
+          "tp": 3,
+          "fp": 1,
+          "fn": 5,
+          "predictions": 4,
+          "labels": 8,
+          "precision": 0.75,
+          "recall": 0.375,
+          "f1": 0.5,
+          "interpretation": "geometry-derived relationships"
+        },
+        "opening_host": {
+          "available": true,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 0,
+          "labels": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "interpretation": "possible geometric flank associations; not confirmed door/window hosts"
+        },
+        "opening_host_assignments": {
+          "labels_available": true,
+          "opening_labels": 0,
+          "manual_assignments": 0,
+          "correct_supported_assignments": 0,
+          "accuracy_on_assignments": null,
+          "confirmed_assignments": 0,
+          "unresolved_opening_candidates": 0,
+          "confirmed_host_accuracy": null,
+          "reason": "Only possible flank support is labelled here; no confirmed semantic door/window host truth or automatic confirmation."
+        },
+        "calibration": {
+          "regions": 1,
+          "conflicting": 0,
+          "status_counts": {
+            "cross_checked": 1
+          },
+          "relative_scale_errors": [
+            0.0
+          ],
+          "reference_residuals_m": [
+            0.0,
+            0.0
+          ]
+        },
+        "review": {
+          "candidates": 5,
+          "unresolved": 1,
+          "measurements": 5,
+          "needs_review": 5,
+          "unavailable_si": 0,
+          "inferred_measurements": 0,
+          "unresolved_rate": 0.2,
+          "needs_review_rate": 1.0
+        },
+        "diagnostics": [
+          "possible_missed_source_wall",
+          "thin_stroke"
+        ]
+      },
+      "room_strict_iou_075": {
+        "available": true,
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "predictions": 1,
+        "labels": 2,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matches": [],
+        "matched_polygon_iou_mean": null,
+        "si_errors": {
+          "samples": 0,
+          "labelled_objects": 2,
+          "eligible_predictions": 1,
+          "mae": null,
+          "p95_linear": null,
+          "absolute_errors": [],
+          "unit": "m2"
+        },
+        "approval_gate": {
+          "eligible": 0,
+          "eligible_unmatched_predictions": 0,
+          "materially_wrong_matched_values_eligible": 0,
+          "material_error_threshold_relative": 0.05
+        }
+      }
+    }
+  ],
+  "source_line_audits": [
+    {
+      "dataset": "two_rooms",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 7,
+      "interpretation_counts": {
+        "represented": 7
+      },
+      "unexplained_source_length": 0.0,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "door",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 8,
+      "interpretation_counts": {
+        "represented": 8
+      },
+      "unexplained_source_length": 0.0,
+      "unassessed_curves": 1
+    },
+    {
+      "dataset": "decorations",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 20,
+      "interpretation_counts": {
+        "represented": 16,
+        "small_or_closed_graphic_ambiguous": 4
+      },
+      "unexplained_source_length": 220.0,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "endpoint_gap",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 5,
+      "interpretation_counts": {
+        "represented": 5
+      },
+      "unexplained_source_length": 0.0,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "thin_partition",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 7,
+      "interpretation_counts": {
+        "represented": 6,
+        "possible_missed_wall": 1
+      },
+      "unexplained_source_length": 299.999998,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "dashed_partition",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 7,
+      "interpretation_counts": {
+        "represented": 6,
+        "possible_missed_wall": 1
+      },
+      "unexplained_source_length": 299.999998,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "missing_wall",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 6,
+      "interpretation_counts": {
+        "represented": 6
+      },
+      "unexplained_source_length": 0.0,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "invalid_graphic",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 0,
+      "interpretation_counts": {},
+      "unexplained_source_length": 0,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "rotated_cropped",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 7,
+      "interpretation_counts": {
+        "represented": 7
+      },
+      "unexplained_source_length": 0.0,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "multipage",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 7,
+      "interpretation_counts": {
+        "represented": 7
+      },
+      "unexplained_source_length": 0.0,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "multipage",
+      "page": 2,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 8,
+      "interpretation_counts": {
+        "represented": 8
+      },
+      "unexplained_source_length": 0.0,
+      "unassessed_curves": 1
+    },
+    {
+      "dataset": "original",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 10,
+      "interpretation_counts": {
+        "represented": 6,
+        "small_or_closed_graphic_ambiguous": 4
+      },
+      "unexplained_source_length": 200.0,
+      "unassessed_curves": 1
+    },
+    {
+      "dataset": "original",
+      "page": 2,
+      "status": "source_geometry_unavailable",
+      "completeness": "not_established",
+      "source_edges": 0,
+      "interpretation_counts": {},
+      "unexplained_source_length": 0,
+      "unassessed_curves": 0
+    },
+    {
+      "dataset": "partial_thin_partition",
+      "page": 1,
+      "status": "assessed_supported_straight_strokes",
+      "completeness": "not_established",
+      "source_edges": 5,
+      "interpretation_counts": {
+        "represented": 4,
+        "possible_missed_wall": 1
+      },
+      "unexplained_source_length": 119.999999,
+      "unassessed_curves": 0
+    }
+  ],
+  "aggregate_all_synthetic": {
+    "room": {
+      "labelled_pages": 13,
+      "unlabelled_pages": 1,
+      "tp": 19,
+      "fp": 1,
+      "fn": 4,
+      "predictions": 20,
+      "labels": 23,
+      "precision": 0.95,
+      "recall": 0.8260869565217391,
+      "f1": 0.8837209302325582,
+      "matched_polygon_iou_mean": 0.8947368421052632,
+      "si_errors": {
+        "samples": 19,
+        "labelled_objects": 23,
+        "eligible_predictions": 20,
+        "mae": 1.263157894736842,
+        "p95_linear": 6.0,
+        "absolute_errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          6.0,
+          6.0,
+          6.0,
+          6.0
+        ]
+      },
+      "approval_gate": {
+        "eligible": 0,
+        "eligible_unmatched_predictions": 0,
+        "materially_wrong_matched_values_eligible": 0
+      }
+    },
+    "wall": {
+      "labelled_pages": 13,
+      "unlabelled_pages": 1,
+      "tp": 69,
+      "fp": 13,
+      "fn": 11,
+      "predictions": 82,
+      "labels": 80,
+      "precision": 0.8414634146341463,
+      "recall": 0.8625,
+      "f1": 0.8518518518518519,
+      "si_errors": {
+        "samples": 69,
+        "labelled_objects": 80,
+        "eligible_predictions": 82,
+        "mae": 0.0,
+        "p95_linear": 0.0,
+        "absolute_errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "approval_gate": {
+        "eligible": 0,
+        "eligible_unmatched_predictions": 0,
+        "materially_wrong_matched_values_eligible": 0
+      }
+    },
+    "opening": {
+      "labelled_pages": 13,
+      "unlabelled_pages": 1,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "predictions": 3,
+      "labels": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "wall_connectivity": {
+      "labelled_pages": 13,
+      "unlabelled_pages": 1,
+      "tp": 82,
+      "fp": 16,
+      "fn": 21,
+      "predictions": 98,
+      "labels": 103,
+      "precision": 0.8367346938775511,
+      "recall": 0.7961165048543689,
+      "f1": 0.8159203980099502
+    },
+    "room_adjacency": {
+      "labelled_pages": 13,
+      "unlabelled_pages": 1,
+      "tp": 7,
+      "fp": 0,
+      "fn": 4,
+      "predictions": 7,
+      "labels": 11,
+      "precision": 1.0,
+      "recall": 0.6363636363636364,
+      "f1": 0.7777777777777778
+    },
+    "room_boundary": {
+      "labelled_pages": 13,
+      "unlabelled_pages": 1,
+      "tp": 75,
+      "fp": 12,
+      "fn": 22,
+      "predictions": 87,
+      "labels": 97,
+      "precision": 0.8620689655172413,
+      "recall": 0.7731958762886598,
+      "f1": 0.8152173913043478
+    },
+    "opening_host": {
+      "labelled_pages": 13,
+      "unlabelled_pages": 1,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "predictions": 6,
+      "labels": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "review": {
+      "candidates": 105,
+      "unresolved": 16,
+      "measurements": 102,
+      "needs_review": 102,
+      "unavailable_si": 0,
+      "inferred_measurements": 7,
+      "unresolved_rate": 0.1523809523809524,
+      "needs_review_rate": 1.0
+    },
+    "room_strict_iou_075": {
+      "tp": 15,
+      "fp": 5,
+      "fn": 8,
+      "predictions": 20,
+      "labels": 23,
+      "precision": 0.75,
+      "recall": 0.6521739130434783,
+      "f1": 0.6976744186046512
+    },
+    "calibration": {
+      "regions": 14,
+      "conflicting_regions": 0,
+      "ground_truth_scale_regions": 13,
+      "relative_error": {
+        "samples": 13,
+        "labelled_objects": 13,
+        "eligible_predictions": 13,
+        "mae": 0.0,
+        "p95_linear": 0.0,
+        "absolute_errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "residual_m": {
+        "samples": 26,
+        "labelled_objects": 26,
+        "eligible_predictions": 26,
+        "mae": 0.0,
+        "p95_linear": 0.0,
+        "absolute_errors": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "opening_host_assignments": {
+      "opening_labels": 3,
+      "manual_assignments": 0,
+      "correct_supported_assignments": 0,
+      "confirmed_assignments": 0,
+      "unresolved_opening_candidates": 3,
+      "accuracy_on_assignments": null,
+      "confirmed_host_accuracy": null
+    }
+  },
+  "core_failure_outcomes": {
+    "material_errors": 12,
+    "detected": 9,
+    "blocked": 12,
+    "escalated": 3,
+    "measurement_review_gate_passes": 0,
+    "engineering_handoff_gate_passes": 0,
+    "intrinsically_undetectable_without_additional_evidence": [
+      "wrong_uniform_scale_10_percent",
+      "incorrect_units_consistently_entered_cm",
+      "missing_source_partition"
+    ],
+    "counts_overlap": "Escalated cases are blocked at the approval gate, but their material error is not detected."
+  },
+  "adversarial_provenance_probe": {
+    "scenario": "false_independent_physical_evidence_declarations",
+    "material_error": true,
+    "detected": false,
+    "blocked": false,
+    "escalated": false,
+    "measurement_review_gate_pass": true,
+    "engineering_handoff_gate_pass": false,
+    "calibration_correctness": "independently_supported",
+    "evidence_trust_limit": "Provenance is manually declared; referenced external artifacts are not acquired or authenticated. A dishonest/incorrect claim can still pass measurement review.",
+    "approval_snapshot": {
+      "id": "approval:5cc9b0b3ec704bd1fc518e735c61771838ba83e4dcedd8e736a499a54318126e",
+      "measurement_id": "measurement:af610502cff4b2a84d10dba09160338bdf3e4974878bbb8974cb8f918680c89e",
+      "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:74594ecc5b6cb7a6",
+      "dependency_version": "af610502cff4b2a84d10dba09160338bdf3e4974878bbb8974cb8f918680c89e",
+      "measurement_snapshot": {
+        "id": "measurement:af610502cff4b2a84d10dba09160338bdf3e4974878bbb8974cb8f918680c89e",
+        "candidate_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:wall:74594ecc5b6cb7a6",
+        "candidate_type": "wall",
+        "candidate_origin": "automatic",
+        "candidate_status": "provisional",
+        "geometry_version": "44ac55f7b3a5a700259ee844ad6ca8c40999d18d34355e3fecb48750801df72d",
+        "dependency_version": "af610502cff4b2a84d10dba09160338bdf3e4974878bbb8974cb8f918680c89e",
+        "source_document_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+        "page_number": 1,
+        "source_units": "pdf_point",
+        "source_geometry": {
+          "type": "LineString",
+          "coordinates": [
+            {
+              "x": 100.0,
+              "y": 100.0
+            },
+            {
+              "x": 100.0,
+              "y": 400.0
+            }
+          ],
+          "holes": []
+        },
+        "source_evidence": [
+          {
+            "path_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:path0",
+            "source": {
+              "document_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+              "page_number": 1,
+              "path_index": 0,
+              "sequence_number": 2,
+              "extractor": "PyMuPDF 1.28.2 Page.get_drawings"
+            },
+            "item_index": 0,
+            "edge_index": 3,
+            "operation": "rectangle",
+            "source_coordinates": [
+              {
+                "x": 100.0,
+                "y": 100.0
+              },
+              {
+                "x": 500.0,
+                "y": 100.0
+              },
+              {
+                "x": 500.0,
+                "y": 400.0
+              },
+              {
+                "x": 100.0,
+                "y": 400.0
+              }
+            ]
+          }
+        ],
+        "region_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:page_scale",
+        "calibration_region": {
+          "id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:page_scale",
+          "document_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+          "page_number": 1,
+          "name": "Page fallback",
+          "bounds": [
+            0.0,
+            0.0,
+            600.0,
+            500.0
+          ],
+          "scope": "page",
+          "source_units": "pdf_point"
+        },
+        "calibration_version": "a123c809870220cf533eed6bd9ad9a42afe3250aca1c4c9122eb2b3ee63c02f7",
+        "calibration_revision": 2,
+        "calibration_diagnostic_tolerance": 0.02,
+        "calibration_status": "cross_checked",
+        "calibration_reference_ids": [
+          "reference:3fd821d13cb1477d86af32589a185b48",
+          "reference:485da7f7f4874394a4d56010d1620bcc"
+        ],
+        "calibration_references": [
+          {
+            "id": "reference:3fd821d13cb1477d86af32589a185b48",
+            "region_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:page_scale",
+            "document_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+            "page_number": 1,
+            "points": [
+              {
+                "x": 100.0,
+                "y": 100.0
+              },
+              {
+                "x": 500.0,
+                "y": 100.0
+              }
+            ],
+            "known_distance": 4.4,
+            "unit": "m",
+            "dimension_label": "Probe 0",
+            "selection_method": "manual_source_coordinates",
+            "association_method": "manual_dimension_association",
+            "preview_frame_id": null,
+            "preview_transform": null,
+            "preview_points": null,
+            "note": "",
+            "establishment": {
+              "kind": "independently_verified_physical",
+              "independence_group": "FAKE-CLAIM-independent-domain-0",
+              "evidence_record": "FAKE-CLAIM-unavailable-record-0",
+              "evidence_sha256": "6fd7352d01b29247b99aefdc2b0c95588a59df927ec6b278205e4394ee9edf4f",
+              "established_by": "Adversarial synthetic harness; no real survey",
+              "established_at": "2026-10-27",
+              "unit_basis": "explicit_physical_reference",
+              "unit_statement": "Intentionally false unit/evidence declaration"
+            }
+          },
+          {
+            "id": "reference:485da7f7f4874394a4d56010d1620bcc",
+            "region_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328:p1:page_scale",
+            "document_id": "2a0deaaae29101e8556dad4bf3cb3f5c83e98eaabd32570af6b289f6291cd328",
+            "page_number": 1,
+            "points": [
+              {
+                "x": 100.0,
+                "y": 100.0
+              },
+              {
+                "x": 100.0,
+                "y": 400.0
+              }
+            ],
+            "known_distance": 3.3,
+            "unit": "m",
+            "dimension_label": "Probe 1",
+            "selection_method": "manual_source_coordinates",
+            "association_method": "manual_dimension_association",
+            "preview_frame_id": null,
+            "preview_transform": null,
+            "preview_points": null,
+            "note": "",
+            "establishment": {
+              "kind": "independently_verified_physical",
+              "independence_group": "FAKE-CLAIM-independent-domain-1",
+              "evidence_record": "FAKE-CLAIM-unavailable-record-1",
+              "evidence_sha256": "e33b4cf0de4040047f94b2998ad32509196c50bcf59f4bfddd64f257d2daf29b",
+              "established_by": "Adversarial synthetic harness; no real survey",
+              "established_at": "2026-10-27",
+              "unit_basis": "explicit_physical_reference",
+              "unit_statement": "Intentionally false unit/evidence declaration"
+            }
+          }
+        ],
+        "calibration_primary_reference_id": "reference:3fd821d13cb1477d86af32589a185b48",
+        "calibration_residuals": [
+          {
+            "reference_id": "reference:3fd821d13cb1477d86af32589a185b48",
+            "unit_entered": "m",
+            "distance_entered": 4.4,
+            "known_metres": 4.4,
+            "drawing_distance": 400.0,
+            "implied_metres_per_unit": 0.011000000000000001,
+            "predicted_metres": 4.4,
+            "residual_metres": 0.0,
+            "relative_residual": 0.0,
+            "agrees_with_primary": true,
+            "independent_of_primary": false,
+            "comparison_span_distinct": false,
+            "evidence_independent_of_primary": false
+          },
+          {
+            "reference_id": "reference:485da7f7f4874394a4d56010d1620bcc",
+            "unit_entered": "m",
+            "distance_entered": 3.3,
+            "known_metres": 3.3,
+            "drawing_distance": 300.0,
+            "implied_metres_per_unit": 0.011,
+            "predicted_metres": 3.3000000000000003,
+            "residual_metres": 4.440892098500626e-16,
+            "relative_residual": 1.345724878333523e-16,
+            "agrees_with_primary": true,
+            "independent_of_primary": true,
+            "comparison_span_distinct": true,
+            "evidence_independent_of_primary": true
+          }
+        ],
+        "printed_hypothesis": null,
+        "scale_metres_per_source_unit": 0.011000000000000001,
+        "raw_drawing_value": 300.0,
+        "value_si": 3.3000000000000003,
+        "si_unit": "m",
+        "calculation_method": "Shapely 2.2.0; GEOS 3.14.1; LineString.length * scale; shapely_si_v1",
+        "geometric_convention": "Length along the candidate's straight extracted stroke centerline; not a wall-face or material-thickness measurement.",
+        "has_inferred_boundaries": false,
+        "boundary_bridge_ids": [],
+        "boundary_support": "complete_source_supported",
+        "verification_state": "cross_checked",
+        "review_status": "not_reviewed",
+        "checks": [
+          {
+            "code": "known_distance_calibration",
+            "passed": true,
+            "explanation": "Scale must come from consistent known-distance references, not a printed hypothesis."
+          },
+          {
+            "code": "independent_scale_comparison",
+            "passed": true,
+            "explanation": "Independent manually associated dimensions agree within the configured diagnostic tolerance."
+          },
+          {
+            "code": "independent_scale_unit_evidence",
+            "passed": true,
+            "explanation": "The primary span needs a distinct physical evidence record/error-source comparison with explicit units. Review disagreement is capped at 2% or the smaller diagnostic tolerance; this is gate policy, not engineering accuracy. Declarations are not authenticated."
+          },
+          {
+            "code": "structure_completeness",
+            "passed": true,
+            "explanation": "Room geometry alone cannot establish the absence of missing structure; no independent completeness validation is implemented."
+          },
+          {
+            "code": "complete_source_boundary",
+            "passed": true,
+            "explanation": "No inferred/manual boundary closure is used."
+          },
+          {
+            "code": "original_command_coverage",
+            "passed": true,
+            "explanation": "Source straight commands cover the measured line or all polygon rings within 0.000001 drawing units."
+          },
+          {
+            "code": "current_geometry_dependencies",
+            "passed": true,
+            "explanation": "Superseded candidates and regions affected by wall edits require reconstruction."
+          },
+          {
+            "code": "resolved_candidate",
+            "passed": true,
+            "explanation": "Unresolved candidate flags prevent measurement cross-check status."
+          },
+          {
+            "code": "source_scope",
+            "passed": true,
+            "explanation": "All source evidence belongs to the calibrated document/page."
+          }
+        ],
+        "warnings": [
+          "Independent physical evidence is manually declared, not authenticated by PlanTrace. Shared systematic errors or false declarations may remain.",
+          "PDF clipping/visibility and architectural classification remain unverified."
+        ],
+        "approval_id": null,
+        "engineering_approved": false,
+        "calibration_correctness": "independently_supported",
+        "structure_completeness": "not_applicable",
+        "review_policy_version": "stage6_evidence_v1"
+      },
+      "reviewer": "Adversarial harness",
+      "note": "Deliberately false external evidence declarations; not real independent validation",
+      "approved_at": "2026-10-27T20:45:17.874301+00:00",
+      "scope": "manual_measurement_review_only",
+      "engineering_approval": false
+    }
+  },
+  "all_material_outcomes": {
+    "tested": 13,
+    "detected": 9,
+    "blocked": 12,
+    "escalated": 3,
+    "measurement_review_gate_passes": 1,
+    "engineering_handoff_gate_passes": 0,
+    "definition": "12 original material scenarios plus one deliberately false independent-evidence declaration probe. Escalation and blocking overlap; neither proves detection."
+  },
+  "real_plan_coverage": {
+    "evaluated_pages": 0,
+    "reason_if_missing": "No permitted independent architectural drawing downloaded: Wikimedia HTTP 429; LOC interactive challenge. No real detections or SI truth claimed.",
+    "implementation_session_access": "New CC BY-SA architectural PDF download: HTTP 429. LOC floor-plan resource: HTTP 403. Metadata was accessible; no original drawing obtained."
+  },
+  "browser_qa": {
+    "browser_test_executed": false,
+    "implementation_session_inventory": {
+      "apps": 0,
+      "browsers": 0
+    },
+    "basis": "Enabled browser/app inventory was empty in the implementation session; AppTest, Node handlers and affine/overlay tests used."
+  }
+}
